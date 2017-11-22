@@ -27,3 +27,4 @@ Thumbs.db
 /.ipython
 /.jupyter
 /.local
+.coverage
