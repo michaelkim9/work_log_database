@@ -10,6 +10,12 @@ To run the code, please run the following in Bash.
 $ python3 work_log.py
 ```
 
+To run the coverage test, please run the following in Bash.
+```bash
+$ coverge run work_log_test.py
+$ coverage report
+```
+
 ### The Task
 
 The CSV timesheets were a huge success but some more features are needed, including the ability for other developers to use the data without worrying about file locking or availability. The managers have also asked for a way to view time entries for each employee. Seems like a database would be a better solution than a CSV file!
