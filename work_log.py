@@ -88,11 +88,12 @@ def menu_loop():
     '''Beginning menu when app is launched'''
     menu_select = None
     while menu_select != 'q':
-        print('Please make a selection.\n'
-              'Enter "Q" to quit.')
+        print('Welcome to the Work Log Database!\n'
+              'Enter "Q" to quit.\n\n'
+              'Select "a", "b", or "c"')
         for key, value in menu.items():
-            print('{}. {}'.format(key, value.__doc__))
-        menu_select = input('> ')
+            print('{}) {}'.format(key, value.__doc__))
+        menu_select = input('> ').lower().strip()
         if menu_select in menu:
             clear_screen()
             menu[menu_select]()
@@ -102,11 +103,12 @@ def search_menu_loop():
     '''Search for a record'''
     menu_select = None
     while menu_select != 'q':
-        print('Please make a selection.\n'
-              'Enter "Q" to return to main menu.')
+        print('How would you like to search?\n'
+              'Enter "Q" to return to main menu.\n\n'
+              'Select "a", "b", "c", or "d"')
         for key, value in search_menu.items():
-            print('{}. {}'.format(key, value.__doc__))
-        menu_select = input('> ')
+            print('{}) {}'.format(key, value.__doc__))
+        menu_select = input('> ').lower().strip()
         if menu_select in search_menu:
             clear_screen()
             search_menu[menu_select]()
@@ -149,16 +151,16 @@ def employee():
 
 
 menu = OrderedDict([
-    ('1', new_task),
-    ('2', display_task),
-    ('3', search_menu_loop)
+    ('a', new_task),
+    ('b', display_task),
+    ('c', search_menu_loop)
 ])
 
 search_menu = OrderedDict([
-    ('1', exact_date),
-    ('2', task_term),
-    ('3', employee),
-    ('4', time_spent),
+    ('a', exact_date),
+    ('b', task_term),
+    ('c', employee),
+    ('d', time_spent),
 ])
 
 

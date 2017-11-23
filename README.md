@@ -10,10 +10,10 @@ To run the code, please run the following in Bash.
 $ python3 work_log.py
 ```
 
-To run the coverage test, please run the following in Bash.
+To run the coverage test, please run the following in Bash. This needs to be run AFTER work_log.py is run and a SQLite database is created with some entries. It's testing functions that require a database with entries. After running work_log.py, a SQLite database will get created with the entries you give it.
 ```bash
-$ coverge run work_log_test.py
-$ coverage report
+$ python3 -m coverge run work_log_tests.py
+$ python3 -m coverage report
 ```
 
 ### The Task
